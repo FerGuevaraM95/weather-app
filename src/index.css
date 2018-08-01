@@ -41,12 +41,12 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label {
     color: white;
 }
 
-.contenedor-form {
+.form-container {
     padding: 3rem 0 1px 0;
     background-color: #03a9f4;
 }
 
-.buscador i {
+.search i {
     width: 100%;
 }
 
@@ -56,20 +56,20 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label {
     text-align: center;
 }
 
-.resultado {
+.result {
     margin-top: 3rem;
 }
 
-.resultado h2 {
+.result h2 {
     font-size: 1.6rem;
     text-align: center;
 }
 
-.resultado p {
+.result p {
     text-align: center;
     font-size: 1.4rem;
 }
 
-.resultado .temperatura {
+.result .temperature {
     font-size: 1.8rem;
 }
