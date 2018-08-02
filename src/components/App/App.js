@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Error from '../Error/Error';
+import Weather from '../Weather/Weather';
 
 class App extends Component {
 
@@ -12,8 +13,10 @@ class App extends Component {
         result: {}
     }
 
-    componentDidUpdate() {
-        this.consultApi();
+    componentDidUpdate(prevProps, prevState) {
+        if(prevState.query !== this.state.query) {
+            this.consultApi();
+        }
     }
 
     componentDidMount() {
@@ -56,7 +59,8 @@ class App extends Component {
         })
     } else {
         this.setState({
-            query : response
+            query : response,
+            error: false
         })
     }
     }
@@ -68,6 +72,8 @@ class App extends Component {
 
     if(error) {
         result = <Error message = 'Ambos campos son obligatorios' />
+    } else {
+        result = <Weather result = {this.state.result} />
     }
 
     return (
