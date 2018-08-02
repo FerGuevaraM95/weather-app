@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Form extends Component {
 
@@ -53,6 +54,10 @@ class Form extends Component {
             </div>
           </div>;
     }
+}
+
+Form.propTypes = {
+    dataQuery: PropTypes.func.isRequired
 }
  
 export default Form;
